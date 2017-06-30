@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="test_AnalysisGraphingDataSet" targetNamespace="http://tempuri.org/test_AnalysisGraphingDataSet.xsd" xmlns:mstns="http://tempuri.org/test_AnalysisGraphingDataSet.xsd" xmlns="http://tempuri.org/test_AnalysisGraphingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="test_AnalysisGraphingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="test_AnalysisGraphingConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.testGraphAnalysis.Properties.Settings.GlobalReference.Default.test_AnalysisGraphingConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_combined_DischargePrecipitation_byDateTableAdapter" GeneratorDataComponentClassName="vw_combined_DischargePrecipitation_byDateTableAdapter" Name="vw_combined_DischargePrecipitation_byDate" UserDataComponentName="vw_combined_DischargePrecipitation_byDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="test_AnalysisGraphingConnectionString (Settings)" DbObjectName="test_AnalysisGraphing.dbo.vw_combined_DischargePrecipitation_byDate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT date, discharge, precipitation, snowfall FROM dbo.vw_combined_DischargePrecipitation_byDate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="date" DataSetColumn="date" />
+              <Mapping SourceColumn="discharge" DataSetColumn="discharge" />
+              <Mapping SourceColumn="precipitation" DataSetColumn="precipitation" />
+              <Mapping SourceColumn="snowfall" DataSetColumn="snowfall" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="test_AnalysisGraphingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="test_AnalysisGraphingDataSet" msprop:Generator_UserDSName="test_AnalysisGraphingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_combined_DischargePrecipitation_byDate" msprop:Generator_TableClassName="vw_combined_DischargePrecipitation_byDateDataTable" msprop:Generator_TableVarName="tablevw_combined_DischargePrecipitation_byDate" msprop:Generator_TablePropName="vw_combined_DischargePrecipitation_byDate" msprop:Generator_RowDeletingName="vw_combined_DischargePrecipitation_byDateRowDeleting" msprop:Generator_RowChangingName="vw_combined_DischargePrecipitation_byDateRowChanging" msprop:Generator_RowEvHandlerName="vw_combined_DischargePrecipitation_byDateRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_combined_DischargePrecipitation_byDateRowDeleted" msprop:Generator_UserTableName="vw_combined_DischargePrecipitation_byDate" msprop:Generator_RowChangedName="vw_combined_DischargePrecipitation_byDateRowChanged" msprop:Generator_RowEvArgName="vw_combined_DischargePrecipitation_byDateRowChangeEvent" msprop:Generator_RowClassName="vw_combined_DischargePrecipitation_byDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="discharge" msprop:Generator_ColumnVarNameInTable="columndischarge" msprop:Generator_ColumnPropNameInRow="discharge" msprop:Generator_ColumnPropNameInTable="dischargeColumn" msprop:Generator_UserColumnName="discharge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="precipitation" msprop:Generator_ColumnVarNameInTable="columnprecipitation" msprop:Generator_ColumnPropNameInRow="precipitation" msprop:Generator_ColumnPropNameInTable="precipitationColumn" msprop:Generator_UserColumnName="precipitation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="snowfall" msprop:Generator_ColumnVarNameInTable="columnsnowfall" msprop:Generator_ColumnPropNameInRow="snowfall" msprop:Generator_ColumnPropNameInTable="snowfallColumn" msprop:Generator_UserColumnName="snowfall" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
